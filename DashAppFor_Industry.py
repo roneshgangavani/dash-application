@@ -1,5 +1,6 @@
 import random
 import dash
+import flask
 import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
@@ -38,7 +39,8 @@ df_indu=df_indu.reset_index()
 indu=df_indu['Industry'].unique()
 year=df_eda['Year'].unique()
 month=[1,2,3,4,5,6,7,8,9,10,11,12]
-app=dash.Dash()
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, server=server)
 app.layout = html.Div([
     html.Div(html.H1(children="Market Cap")),
     html.Label("Dash Graph"),
