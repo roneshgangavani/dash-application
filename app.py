@@ -150,6 +150,6 @@ def update_graph(input_value,c1,c2,yr,mon):
 
     }
 if __name__ =="__main__":
-    app.run_server(debug=False)
+    app.run_server(debug=True)
 
 
