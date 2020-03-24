@@ -35,7 +35,7 @@ color=['Red','Blue','Green']
 #
 # fig=go.Figure(data=data1,layout=layout)
 global df_eda
-df_eda=pd.read_csv('check_data_csv')
+df_eda=pd.read_csv('check_data_csv.csv')
 df_indu=df_eda.groupby(['Industry','Date_New_quarterly'])['marketcap'].sum()
 df_indu=df_indu.reset_index()
 indu=df_indu['Industry'].unique()
